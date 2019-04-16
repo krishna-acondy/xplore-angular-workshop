@@ -1,0 +1,9 @@
+<div class="projects">
+  <span class="title">Projects</span>
+  <div *ngFor="let project of projects" class="project" (click)="onClick(project)">
+    <span class="name">{{ project.name }}</span>
+    <span class="start-date">Started on {{ project.startDate | date:'fullDate'}}</span>
+    <span class="description">{{ project.description }}</span>
+    <!-- <app-user *ngFor="let collaborator of project.collaborators" [user]="collaborator"></app-user> -->
+  </div>
+</div>

@@ -1,0 +1,38 @@
+:host {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-size: 250%;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #dcedf8;
+      }
+
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+
+      .name {
+        font-size: 200%;
+      }
+
+      .description {
+        font-size: 90%;
+      }
+    }
+  }
+}

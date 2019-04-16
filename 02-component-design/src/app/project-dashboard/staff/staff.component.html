@@ -1,0 +1,6 @@
+<div class="staff">
+  <span class="title">Staff</span>
+  <div *ngFor="let employee of staff" class="employee">
+    <app-user [user]="employee"></app-user>
+  </div>
+</div>
