@@ -1,0 +1,13 @@
+<div class="courses">
+  <div class="course" *ngFor="let course of courses$ | async">
+    {{ course.description }}
+  </div>
+</div>
+<br/>
+<br/>
+<div class="courses">
+  <div class="course" *ngFor="let course of courses$ | async">
+    {{ course.description }}
+  </div>
+</div>
+<button #button>Load Courses</button>
