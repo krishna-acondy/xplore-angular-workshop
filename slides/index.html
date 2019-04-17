@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Xplore - Angular Workshop</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class='title-page' data-state='title-page'>
+					<h1>Angular Workshop</h1>
+					<h3>Team Xplore</h3>
+					<br/>
+					<h4>Krishna Acondy</h4>
+					<h6>Senior Software Developer, TissueMark</h6>
+					<h6>Philips Digital & Computational Pathology</h6>
+				</section>
+				<section data-background='#ffffff'>
+					<section data-background='#000000'>
+						<h3>The Plan &#x1F5D2;</h3>
+					</section>
+					<section>
+						<p class="fragment" style='color: #1974da'>Project Setup / Architecture</p>
+						<p class="fragment" style='color: #19b3da'>Component Design Principles</p>
+						<p class="fragment" style='color: #16ceb7'>Services and Dependency Injection</p>
+						<p class="fragment" style='color: #1be6c7'>HTTP requests, Promises and Observables</p>
+						<p class="fragment" style='color: #16ce84'>i18n</p>
+					</section>
+				</section>
+				<section>
+					<section data-background='#1974da'>
+						<h3>Project Setup / Architecture &#x1F3F0;</h3>
+					</section>
+					<section>
+						<img style='border: none' src='./img/angular-architecture-overview.png'/>
+					</section>
+					<section>
+						<p class='fragment'>Use CLI to scaffold apps</p>
+						<p class='fragment'>Multi-project workspaces</p>
+						<p class='fragment'>Generate library projects</p>
+						<p class='fragment'>Use NgModules to split up functionality</p>
+						<p class='fragment'>Keep things close to where they are used</p>
+						<p class='fragment'>Figure out routing strategy early</p>
+					</section>
+				</section>
+				<section>
+					<section data-background='#19b3da'>
+						<h3>Component Design Principles &#x1F9E9;</h3>
+					</section>
+					<section data-background='#19b3da'>
+						<img style='border: none' src='./img/lifecycle-hooks.webp'/>
+					</section>
+					<section data-background='#19b3da'>
+						<img style='border: none' src='./img/component-tree.png'/>
+					</section>
+					<section data-background='#19b3da'>
+						<img style='border: none' src='./img/change-detection-1.svg'/>
+					</section>
+					<section data-background='#19b3da'>
+						<img style='border: none' src='./img/change-detection-2.svg'/>
+					</section>
+					<section data-background='#19b3da'>
+						<img style='border: none' src='./img/change-detection-3.svg'/>
+					</section>
+					<section>
+						<p class='fragment'>Separation of concerns</p>
+						<p class='fragment'>Reusability</p>
+						<p class='fragment'>Smart vs Presentation components</p>
+						<p class='fragment'>Data in, events out</p>
+						<p class='fragment'>Input setters</p>
+						<p class='fragment'>Facade services for larger smart components</p>
+						<p class='fragment'>Change detection strategy</p>
+					</section>
+				</section>
+				<section>
+					<section data-background='#16ceb7'>
+						<h3>Services and Dependency Injection &#x1F489;</h3>
+					</section>
+					<section>
+						<p class='fragment'>Lazy vs eager loading</p>
+						<p class='fragment'>Shared vs local services</p>
+						<p class='fragment'>Core module for dependencies instantiated once per app</p>
+					</section>
+				</section>
+				<section>
+					<section data-background='#1be6c7'>
+						<h3>HTTP requests, Promises and Observables &#x1F440;</h3>
+					</section>
+					<section>
+						<p class='fragment'>Promise-based native fetch API</p>
+						<p class='fragment'>Angular HTTP Client</p>
+						<p class='fragment'>HTTP Interceptors</p>
+						<p class='fragment'>Promises vs Observables</p>
+						<p class='fragment'>Combining streams</p>
+						<p class='fragment'>RxJS Operators</p>
+					</section>
+				</section>
+				<section>
+					<section data-background='#16ce84'>
+						<h3>i18n &#x1F30F;</h3>
+					</section>
+					<section>
+						<p class='fragment'>Translated strings stored in JSON files</p>
+						<p class='fragment'>Appropriate file loaded based on current language</p>
+						<p class='fragment'>Can be based on browser language or be determined by a call to the backend</p>
+						<p class='fragment'>APP_INITIALIZER</p>
+					</section>
+				</section>
+				<section data-state='last-page'>
+					<h2>Thank you!</h2>
+					<br/><br/>
+					<h1>&#x1F642;</h1>
+					<br/><br/>
+					<h3>Questions?</h3>
+				</section>
+				<section data-state='last-page'>
+					<h1>&#x1F44B;</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
